@@ -1,0 +1,12 @@
+<button class="button" [ngClass]="getClass()" [class.w-full]="fullWidth">
+  {{ label }}
+  @if (iconUrl) {
+  <img
+    [ngSrc]="iconUrl"
+    width="20"
+    height="20"
+    alt="arrow right icon"
+    class="ml-2 rounded-full bg-white w-5 h-5"
+  />
+  }
+</button>

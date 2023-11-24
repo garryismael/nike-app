@@ -1,0 +1,22 @@
+<header class="absolute z-10 w-full py-8 padding-x">
+  <nav class="flex items-center justify-between max-container">
+    <a routerLink="/">
+      <img
+        ngSrc="/assets/images/header-logo.svg"
+        width="130"
+        height="29"
+        alt="Logo"
+      />
+    </a>
+    <ul class="flex items-center justify-center flex-1 gap-16 max-lg:hidden">
+      @for (navLink of navLinks; track navLink.label) {
+      <li>
+        <a [routerLink]="navLink.href" class="link">{{ navLink.label }}</a>
+      </li>
+      }
+    </ul>
+    <div class="hidden max-lg:block">
+      <img ngSrc="/assets/icons/hamburger.svg" width="25" height="25" />
+    </div>
+  </nav>
+</header>

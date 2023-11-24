@@ -1,0 +1,19 @@
+<div
+  class="border-2 cursor-pointer rounded-xl max-sm:flex-1"
+  [ngClass]="
+    bigShoeImg === imgUrl.bigShoe ? 'border-coral-red' : 'border-transparent'
+  "
+  (click)="handleClick()"
+>
+  <div
+    class="flex justify-center items-center bg-card bg-center bg-cover sm:w-40 sm:h-40 rounded-xl max-sm:p-4"
+  >
+    <img
+      [ngSrc]="imgUrl.thumbnail"
+      alt="shoe collection"
+      width="127"
+      height="103.34"
+      class="object-contain"
+    />
+  </div>
+</div>
